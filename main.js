@@ -322,7 +322,7 @@ function initCanvas() {
   })
 
   canvas.addEventListener('wheel', function (evt) {
-    canvas.zoom += canvas.zoom * (evt.deltaY / 100)
+    canvas.zoom -= ((evt.deltaY / 1000)*canvas.zoom)
   })
 
   function resizeCanvas() {
